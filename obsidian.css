@@ -1,6 +1,6 @@
 :root {
-	--quattro-font: 	'iA Writer Quattro V', 'iA Writer Quattro S', sans-serif;
-	--font-monospace: 	'iA Writer Mono V', 'iA Writer Mono S', monospace;
+	--ia-writer-font: 	'iA Writer Mono V', 'iA Writer Mono S', sans-serif;
+	--font-monospace: 	'FiraCode Nerd Font', monospace;
 	--default-font:		-apple-system, BlinkMacSystemFont, var(--font-monospace);
 }	
 
@@ -106,9 +106,8 @@ input[type="number"],
 	font-family: var(--default-font);
 }
 
-.markdown-source-view,
-.markdown-preview-view {
-	font-family: var(--quattro-font);
+.markdown-source-view {
+	font-family: var(--ia-writer-font);
 }
 
 .cm-s-obsidian .hmd-fold-html-stub,
@@ -138,7 +137,7 @@ input[type="number"],
 .cm-s-obsidian span.cm-formatting-task,
 .cm-s-obsidian span.cm-formatting-list,
 .cm-s-obsidian span.cm-formatting-quote {
-	font-family: var(--quattro-font);
+	font-family: var(--ia-writer-font);
 }
 
 input[type="text"], 
@@ -283,13 +282,18 @@ input[type="number"] {
 
 /* Code blocks and inline code */
 .markdown-preview-view pre {
+	font-family: var(--font-monospace);
 	background-color: var(--background-code-preview);
+	text-rendering: optimizeLegibility;
+	-webkit-font-feature-settings: "liga" on, "calt" on, "ss02" on;
 }
 
 .markdown-preview-view code {
 	background-color: var(--background-code-preview);
 	color: inherit;
 	font-size: 14px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-feature-settings: "liga" on, "calt" on, "ss02" on;
 }
 
 /* Markdown Preview Tables */
@@ -343,7 +347,6 @@ input[type="number"] {
 }
 
 .markdown-preview-view ul {
-	list-style-type: '– ';
 	margin-block-end: 0em;
 	margin-block-start: 0em;
 }
